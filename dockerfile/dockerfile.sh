@@ -149,6 +149,19 @@ docker run -d -e MYSQL_ROOT_PASSWORD=pw12341234 \
 #dockerfile06 폴더 기준
 docker build -t df6 .
 docker run -d -p 3306:3306 --name df6 df6
+#Dockerfile에 ENV 성정이 되어있어서, 별도로 -e PW 세팅을 안하고 실행해도된다
+docker ps -a
+#비밀번호같은 중요한 정보는 ENV로 설정을 고정해두는 것보다, 실행 시점에 -e 옵션으로 지정하는것을 권장
+
+
+
+#내부 명령어 접근
+docker exec -it mysql bash
+# 컨테이너 내부에서 mysql DB서버 접속
+mysql -u root -p
+# mysql 내부에서 실행
+show databases;
+# testdb 존재여부 확인
 
 
 

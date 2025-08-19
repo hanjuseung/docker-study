@@ -1,0 +1,23 @@
+# 리액트 프로젝트 생성
+
+npx create-react-app my-react-app
+
+리액트 프로젝트 최상단(root) 경로에서 Dockerfile 생성
+...도커파일 작성
+
+불필요한 파일 복사를 막기위해 .dockerignore 파일 생성 -> 작성
+
+# 도커 이미지 빌드
+docker build -t docker-my-react-app .
+
+# 생성 이미지 확인
+docker image ls
+
+# 컨테이너 실행
+docker run -d --name docker-my-react-app -p 3030:3000 docker-my-react-app
+
+docker ps -a
+
+# docker exec -it docker-my-react-app bash
+docker exec -it docker-my-react-app sh
+
