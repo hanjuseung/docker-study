@@ -1,0 +1,7 @@
+FROM mysql
+
+ENV MYSQL_ROOT_PASSWORD=pw12341234
+
+#mysql 기본포트 3306
+#적용효과는 x 공지역할 O
+EXPOSE 3306
