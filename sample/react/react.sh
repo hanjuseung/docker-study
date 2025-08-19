@@ -21,3 +21,7 @@ docker ps -a
 # docker exec -it docker-my-react-app bash
 docker exec -it docker-my-react-app sh
 
+/app 경로에 리액트 프로젝트 파일들 확인
+
+docker rm -f docker-my-react-app
+
