@@ -17,3 +17,10 @@ docker image ls
 docker run -d -p 9090:80 --name my-prod-app my-prod-app
 
 docker ps -a
+
+# 내부 명령어
+cd /usr/share/nginx/html
+ls
+
+# 컨테이너 삭제 
+docker rm -f my-prod-app
